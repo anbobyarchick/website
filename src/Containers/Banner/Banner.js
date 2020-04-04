@@ -32,11 +32,11 @@ const banner = () => (
             
              <img src={BannerDesign} style={bannerDesign} alt='banner' ></img>
            
-             <div>
-            <GalleryNavButton galleryName={'digital'} />
-            <GalleryNavButton galleryName={'illustrated'} />
-            <GalleryNavButton galleryName={'sketch'} />
-        </div>
+            <div>
+                <GalleryNavButton galleryName={'digital'} />
+                <GalleryNavButton galleryName={'illustrations'} />
+                <GalleryNavButton galleryName={'sketchbook'} />
+            </div>
         
 
         </div>
