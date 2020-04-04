@@ -7,21 +7,25 @@ import promotional from '../../../assets/website-designs/fragmented-rose-adverti
 const buttonStyle = {
     backgroundColor: '#692d03',
     justifyContent: 'center',
-    maxWidth: '20%',
-    marginLeft: '80%'
+    maxWidth: '17%',
+    marginLeft: '80%',
+    maxHeight: '18%'
    
     // padding: '0px'
 }
 
 let clicker = null;
+let gallery = null;
+
 const galleryNavButton = (props) => {
 
     clicker = props.clicker;
-    let gallery = props.galleryName;
+    gallery = props.galleryName;
     switch(gallery){
         case 'digital': 
             gallery = digital;
             return(
+                console.log('checking switch case digital: gallery = '+gallery),
                 <div onClick={clicker}>
                     <img src={gallery} style={buttonStyle}alt='idk'></img>
                 </div>
@@ -30,24 +34,24 @@ const galleryNavButton = (props) => {
         case 'illustrations': 
             gallery = illustrated;
             return(
-                <div onClick={clicker} style={buttonStyle}>
-                    <img src={gallery} alt='idk'></img>
+                <div onClick={clicker} >
+                    <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );
         
         case 'sketchbook': 
             gallery = sketch;
             return(
-                <div onClick={clicker} style={buttonStyle}>
-                    <img src={gallery} alt='idk'></img>
+                <div onClick={clicker} >
+                    <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );
         
         default: {
             gallery = promotional;
             return(
-                <div onClick={clicker} style={buttonStyle}>
-                    <img src={gallery} alt='idk'></img>
+                <div onClick={clicker} >
+                    <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );
         }
