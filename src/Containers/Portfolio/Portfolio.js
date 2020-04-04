@@ -1,6 +1,7 @@
 import React, {Component, useState } from 'react';
 import Aux from '../../hoc/AuxComponent/AuxComponent'
 import GalleryWindow from '../../Components/GalleryWindow/GalleryWindow';
+import galleryNavButton from '../NavTools/GalleryNavButton/GalleryNavButton';
 
 
 // This component manages state!
@@ -30,6 +31,7 @@ class Portfolio extends Component {
         return (
             <Aux>
                 <GalleryWindow style={portfolioStyle} />
+
             </Aux>
         )}
 

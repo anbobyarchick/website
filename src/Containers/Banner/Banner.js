@@ -3,7 +3,7 @@ import Aux from '../../hoc/AuxComponent/AuxComponent';
 import ShowNavButton from '../NavTools/ShowNavButton/ShowNavButton';
 import Logo from '../../Components/Logo/Logo'
 import BannerDesign from '../../assets/website-designs/website_banner_design.png'
-import galleryNavButton from '../NavTools/GalleryNavButton/GalleryNavButton';
+import GalleryNavButton from '../NavTools/GalleryNavButton/GalleryNavButton';
 
 // This component is the space which displays the website navigation drop-menu, logo, and potential images
 // CSS GUIDE ### BANNER
@@ -32,13 +32,13 @@ const banner = () => (
             
              <img src={BannerDesign} style={bannerDesign} alt='banner' ></img>
            
-            <ShowNavButton />
-        
-        <div>
-            <galleryNavButton galleryName={'digital'} />
-            <galleryNavButton galleryName = {'illustrated'} />
-            <galleryNavButton galleryName = {'sketch'} />
+             <div>
+            <GalleryNavButton galleryName={'digital'} />
+            <GalleryNavButton galleryName={'illustrated'} />
+            <GalleryNavButton galleryName={'sketch'} />
         </div>
+        
+
         </div>
     </Aux>
 

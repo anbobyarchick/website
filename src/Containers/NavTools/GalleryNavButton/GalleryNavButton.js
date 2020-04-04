@@ -7,6 +7,9 @@ import promotional from '../../../assets/website-designs/fragmented-rose-adverti
 const buttonStyle = {
     backgroundColor: '#692d03',
     justifyContent: 'center',
+    maxWidth: '20%',
+    marginLeft: '80%'
+   
     // padding: '0px'
 }
 
@@ -19,8 +22,8 @@ const galleryNavButton = (props) => {
         case 'digital': 
             gallery = digital;
             return(
-                <div onClick={clicker} style={buttonStyle}>
-                    <img src={gallery} alt='idk'></img>
+                <div onClick={clicker}>
+                    <img src={gallery} style={buttonStyle}alt='idk'></img>
                 </div>
             );
         
