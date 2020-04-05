@@ -23,12 +23,13 @@ const galleryStyle = {
 const galleryWindow = (props) => {
     const art = artArray;
     console.log(art);
-    
+
 
     return(
 
         <div style={galleryStyle}>
-            <ImageFrame />
+            <ImageFrame gallery='illustration' />
+            <ImageFrame gallery='sketchbook' />
         </div>
     )
 
