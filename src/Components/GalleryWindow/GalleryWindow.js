@@ -1,6 +1,6 @@
-import React, { Children } from 'react';
+import React from 'react';
 import ImageFrame from '../../Containers/ImageFrame/ImageFrame';
-import artArray from '../../assets/assetsIndex/assetsIndex';
+
 
 
 const galleryStyle = {
@@ -21,15 +21,11 @@ const galleryStyle = {
 
 
 const galleryWindow = (props) => {
-    const art = artArray;
-    console.log(art);
-
-
+    const gallery = props.galleryName;
+    
     return(
-
         <div style={galleryStyle}>
-            <ImageFrame gallery='illustration' />
-            <ImageFrame gallery='sketchbook' />
+            <ImageFrame gallery={gallery} />
         </div>
     )
 

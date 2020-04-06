@@ -12,10 +12,9 @@ const layout = (props) => (
     <Aux>
         
         <div>
-            <SiteBackground />
-        {/* </div>
-        <div style={farbackcolor}> */}
-            <Banner />
+            {/* <SiteBackground />
+
+            <Banner /> */}
             <Portfolio />
         </div>
        

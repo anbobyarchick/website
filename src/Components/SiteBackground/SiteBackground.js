@@ -1,5 +1,6 @@
 import React from 'react';
 import Rose from '../../assets/Asset 2.png';
+import illustration from '../../assets/artwork/illustrations/illustrationsIndex';
 
 const backgroundStyling = {
     objectFit: 'cover',
@@ -12,7 +13,9 @@ const backgroundStyling = {
 }
 
 const siteBackground = (props) => {
-    return <div><img style={backgroundStyling} src={Rose}></img></div>
+    const path = illustration[3];
+
+    return <div><img style={backgroundStyling} src={path}></img></div>
 }
 
 export default siteBackground

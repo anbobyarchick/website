@@ -1,7 +1,7 @@
 import React, {Component, useState } from 'react';
 import Aux from '../../hoc/AuxComponent/AuxComponent'
 import GalleryWindow from '../../Components/GalleryWindow/GalleryWindow';
-import galleryNavButton from '../NavTools/GalleryNavButton/GalleryNavButton';
+import GalleryNavButton from '../NavTools/GalleryNavButton/GalleryNavButton';
 
 
 // This component manages state!
@@ -11,27 +11,35 @@ import galleryNavButton from '../NavTools/GalleryNavButton/GalleryNavButton';
 // This Components position maintains a static left margin, min-width, max-width, uniform padding
 
 const portfolioStyle = {
-    // marginTop: '20%',
+
     maxWidth: '90%',
     minWidth: '30%',
     display: 'flex',
     flexDirection: 'row'
 }
 
+
 class Portfolio extends Component {
 
     state = {
-        imageArray: [],
-        portfolioDetails: [],
-        detailedImageView: false
+        currentGallery: ''
     }
+    
+    gallerySwitch = (event) => {
+        const newGallery = event.target.galleryName;
+        this.setState({
+            currentGallery: newGallery
+        });
+        console.log('STATE > GALLERY > '+this.state.currentGallery);
+    }
+           
 
     render () {
-
         return (
             <Aux>
-                <GalleryWindow style={portfolioStyle} />
-
+                <GalleryNavButton galleryName={'digital'} clicker={this.gallerySwitch} />
+                <GalleryNavButton galleryName={'illustrations'} clicker={this.gallerySwitch}/>
+                <GalleryNavButton galleryName={'sketchbook'} clicker={this.gallerySwitch}/>
             </Aux>
         )}
 

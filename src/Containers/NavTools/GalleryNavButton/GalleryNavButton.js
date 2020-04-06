@@ -16,41 +16,49 @@ const buttonStyle = {
 
 let clicker = null;
 let gallery = null;
-
+console.log('=====CHECKING CLICKER:'+clicker+' and GALLERY: '+gallery+' before GALLERYNAVBUTTON===============');
 const galleryNavButton = (props) => {
 
-    clicker = props.clicker;
+    console.log('============THE '+props.galleryName+' GALLERY NAV BUTTON=============')
+
     gallery = props.galleryName;
+    clicker = props.clicker;
+    
     switch(gallery){
         case 'digital': 
+            console.log('-------------digital switch hit--------------');
             gallery = digital;
             return(
-                console.log('checking switch case digital: gallery = '+gallery),
                 <div onClick={clicker}>
-                    <img src={gallery} style={buttonStyle}alt='idk'></img>
+                    <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );
-        
+           
         case 'illustrations': 
+            console.log('-------------illustration switch hit--------------')
             gallery = illustrated;
             return(
+                
                 <div onClick={clicker} >
                     <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );
-        
+            
         case 'sketchbook': 
+        console.log('-------------sketchbook switch hit--------------')
             gallery = sketch;
             return(
-                <div onClick={clicker} >
+                
+                <div onClick={()=>this.clicker} >
                     <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );
         
         default: {
+            console.log('-------------DEFAULT switch hit--------------')
             gallery = promotional;
             return(
-                <div onClick={clicker} >
+                <div onClick={()=>clicker} >
                     <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );
