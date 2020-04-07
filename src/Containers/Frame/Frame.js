@@ -4,12 +4,15 @@ let art=null;
 
 const frameStyle = {
 
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     objectFit: 'scale-down',
     maxWidth: '382px',
     maxHeight: '475px',
     minWidth: '138px',
     minHeight: '200px',
+    padding: '2%',
+    margin: '1%',
+    backgroundColor: '#692d03'
 
 }
 

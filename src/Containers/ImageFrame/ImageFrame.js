@@ -12,7 +12,16 @@ let galleryName = null;
 let galleryPaths = [];
 let artwork = [];
 let framedArt = [];
+const artStyle = {
 
+        justifyContent: 'space-around',
+        objectFit: 'scale-down',
+        maxWidth: '382px',
+        maxHeight: '475px',
+        minWidth: '138px',
+        minHeight: '200px',
+    
+}
 const imageImporter = (props) => {
 
     galleryName = props.gallery;
@@ -20,54 +29,26 @@ const imageImporter = (props) => {
     switch(galleryName) {
         case 'digital':
             galleryPaths = digitalGallery;
-            artwork = galleryPaths.map((path)=><img src={path} alt='shrug' />);
+            artwork = galleryPaths.map((path)=><img src={path} style={artStyle} alt='shrug' />);
             framedArt = artwork.map((art)=><Frame art={art} />);
             return(framedArt);
             
         case 'illustration':
             galleryPaths = illustrationGallery;
-            artwork = galleryPaths.map((path)=><img src={path} alt='shrug' />);
+            artwork = galleryPaths.map((path)=><img src={path} style={artStyle} alt='shrug' />);
             framedArt = artwork.map((art)=><Frame art={art} />);
             return(framedArt);
             
         case 'sketchbook':
             galleryPaths = sketchbookGallery;
-            artwork = galleryPaths.map((path)=><img src={path} alt='shrug' />);
+            artwork = galleryPaths.map((path)=><img src={path} style={artStyle} alt='shrug' />);
             framedArt = artwork.map((art)=><Frame art={art} />);
             return(framedArt);
-            
+
         default:
-            return(<img src={promotion} alt='default shrug' />);
+            return(<img src={promotion} style={artStyle} alt='default shrug' />);
     }
 }
 
 export default imageImporter;
-// const imageFrame = (props) => {
-//     gallery = props.gallery;
-//     switch(gallery) {
-//         case 'digital':
-//             return  (
-//                 sketchbookGallery.map((path)=>{
-//                     return(
-//                         <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-//                     }));     
-//         case 'illustration':
-//             return  (
-//                 illustrationGallery.map((path)=>{
-//                     return(
-//                         <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-//                 }));                
-//         case 'sketchbook':
-//             return  (
-//                 sketchbookGallery.map((path)=>{
-//                     return(
-//                         <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-//                 }));
-//         default:
-//             return  (
-//             sketchbookGallery.map((path)=>{
-//                 return(
-//                     <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-//             }));
 
-//     }

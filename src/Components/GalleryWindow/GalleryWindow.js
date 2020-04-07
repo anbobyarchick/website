@@ -13,7 +13,8 @@ const galleryStyle = {
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     maxWidth:'80%',
-    backgroundColor: '#692d03'
+    // backgroundColor: 'black',
+
 }
 
 
