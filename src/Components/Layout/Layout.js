@@ -7,12 +7,12 @@ import DisplaySpace from '../../hoc/DisplaySpace/DisplaySpace';
 
 // This component is meant to set layout only
 const farbackcolor = {
-    backgroundColor: '#38070f'
+    backgroundColor: '#2d1301'
 }
 const layout = (props) => (
     <Aux>
         
-        <div>
+        <div style={farbackcolor}>
             <Banner />
             <DisplaySpace>
                 <Portfolio />

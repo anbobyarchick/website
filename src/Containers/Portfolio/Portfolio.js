@@ -15,7 +15,8 @@ const portfolioStyle = {
     maxWidth: '90%',
     minWidth: '30%',
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+
 }
 
 
