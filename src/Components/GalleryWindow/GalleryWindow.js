@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageImporter from '../../Containers/ImageFrame/ImageFrame';
+import GallerySwitch from '../../Containers/gallerySwitch/gallerySwitch';
 
 
 
@@ -24,7 +24,7 @@ const galleryWindow = (props) => {
     
     return(
         <div style={galleryStyle}>
-            <ImageImporter gallery={gallery} />
+            <GallerySwitch gallery={gallery} />
         </div>
     )
 

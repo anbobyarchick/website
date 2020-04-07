@@ -1,8 +1,8 @@
 import React from 'react';
-import digital from '../../../assets/website-designs/digital_button_design.png';
-import illustrated from '../../../assets/website-designs/illustration_button_design.png';
-import sketch from '../../../assets/website-designs/sketch_button_design.png';
-import promotional from '../../../assets/website-designs/fragmented-rose-advertisement.png';
+import digital from '../../assets/website-designs/digital_button_design.png';
+import illustrated from '../../assets/website-designs/illustration_button_design.png';
+import sketch from '../../assets/website-designs/sketch_button_design.png';
+import promotional from '../../assets/website-designs/fragmented-rose-advertisement.png';
 
 const buttonStyle = {
     position: 'relative',

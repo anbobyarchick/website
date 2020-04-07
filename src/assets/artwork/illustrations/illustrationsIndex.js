@@ -1,5 +1,3 @@
-import React from 'react';
-
 import illustration_1 from '../illustrations/blkWhtBull.jpg';
 import illustration_2 from '../illustrations/bullCity.jpg';
 import illustration_3 from '../illustrations/elephantBalloon.jpg';
