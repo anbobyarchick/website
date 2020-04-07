@@ -5,6 +5,7 @@ import sketch from '../../../assets/website-designs/sketch_button_design.png';
 import promotional from '../../../assets/website-designs/fragmented-rose-advertisement.png';
 
 const buttonStyle = {
+    position: 'relative',
     backgroundColor: '#692d03',
     justifyContent: 'center',
     maxWidth: '17%',
@@ -49,7 +50,7 @@ const galleryNavButton = (props) => {
             gallery = sketch;
             return(
                 
-                <div onClick={()=>this.clicker} >
+                <div onClick={clicker} >
                     <img src={gallery} style={buttonStyle} alt='idk'></img>
                 </div>
             );

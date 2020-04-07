@@ -15,7 +15,7 @@ const bannerStyle = {
     width: '100%',
     marginBottom: '10px',
     height: '20%',
-    position: 'fixed',
+    position: 'relative',
     objectFit: 'scale-down'
 }
 const bannerDesign ={

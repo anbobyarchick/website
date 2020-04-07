@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageFrame from '../../Containers/ImageFrame/ImageFrame';
+import ImageImporter from '../../Containers/ImageFrame/ImageFrame';
 
 
 
@@ -14,8 +14,6 @@ const galleryStyle = {
     justifyContent: 'space-around',
     maxWidth:'80%',
     backgroundColor: '#692d03'
-
-    // backgroundColor: 'maroon'
 }
 
 
@@ -25,7 +23,7 @@ const galleryWindow = (props) => {
     
     return(
         <div style={galleryStyle}>
-            <ImageFrame gallery={gallery} />
+            <ImageImporter gallery={gallery} />
         </div>
     )
 

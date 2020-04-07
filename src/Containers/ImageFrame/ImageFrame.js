@@ -3,51 +3,71 @@
 
 import React from 'react';
 import sketchbookGallery from '../../assets/assetsIndex/assetsIndex';
-import BackgroundWrapper from '../../hoc/BackgroundWrapper/BackgroundWrapper';
 import illustrationGallery from '../../assets/artwork/illustrations/illustrationsIndex';
+import digitalGallery from '../../assets/artwork/digitalWork/digitalIndex';
+import promotion from '../../assets/website-designs/watermarkSignature.png'
+import Frame from '../Frame/Frame';
 
+let galleryName = null;
+let galleryPaths = [];
+let artwork = [];
+let framedArt = [];
 
-const frameStyle = {
+const imageImporter = (props) => {
 
-    justifyContent: 'space-around',
-    objectFit: 'scale-down',
-    maxWidth: '382px',
-    maxHeight: '475px',
-    minWidth: '138px',
-    minHeight: '200px',
+    galleryName = props.gallery;
 
-}
-let gallery = null;
-
-const imageFrame = (props) => {
-    gallery = props.gallery;
-    switch(gallery) {
+    switch(galleryName) {
         case 'digital':
-            return  (
-                sketchbookGallery.map((path)=>{
-                    return(
-                        <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-                }));     
+            galleryPaths = digitalGallery;
+            artwork = galleryPaths.map((path)=><img src={path} alt='shrug' />);
+            framedArt = artwork.map((art)=><Frame art={art} />);
+            return(framedArt);
+            
         case 'illustration':
-            return  (
-                illustrationGallery.map((path)=>{
-                    return(
-                        <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-                }));                
+            galleryPaths = illustrationGallery;
+            artwork = galleryPaths.map((path)=><img src={path} alt='shrug' />);
+            framedArt = artwork.map((art)=><Frame art={art} />);
+            return(framedArt);
+            
         case 'sketchbook':
-            return  (
-                sketchbookGallery.map((path)=>{
-                    return(
-                        <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-                }));
+            galleryPaths = sketchbookGallery;
+            artwork = galleryPaths.map((path)=><img src={path} alt='shrug' />);
+            framedArt = artwork.map((art)=><Frame art={art} />);
+            return(framedArt);
+            
         default:
-            return  (
-            sketchbookGallery.map((path)=>{
-                return(
-                    <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
-            }));
-
+            return(<img src={promotion} alt='default shrug' />);
     }
 }
 
-export default imageFrame;
+export default imageImporter;
+// const imageFrame = (props) => {
+//     gallery = props.gallery;
+//     switch(gallery) {
+//         case 'digital':
+//             return  (
+//                 sketchbookGallery.map((path)=>{
+//                     return(
+//                         <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
+//                     }));     
+//         case 'illustration':
+//             return  (
+//                 illustrationGallery.map((path)=>{
+//                     return(
+//                         <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
+//                 }));                
+//         case 'sketchbook':
+//             return  (
+//                 sketchbookGallery.map((path)=>{
+//                     return(
+//                         <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
+//                 }));
+//         default:
+//             return  (
+//             sketchbookGallery.map((path)=>{
+//                 return(
+//                     <BackgroundWrapper frameObj = {<img style={frameStyle} src={path} alt='testing One' />} />)
+//             }));
+
+//     }

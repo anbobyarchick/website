@@ -37,6 +37,7 @@ class Portfolio extends Component {
     render () {
         return (
             <Aux>
+                <GalleryWindow galleryName={'sketchbook'}/>
                 <GalleryNavButton galleryName={'digital'} clicker={this.gallerySwitch} />
                 <GalleryNavButton galleryName={'illustrations'} clicker={this.gallerySwitch}/>
                 <GalleryNavButton galleryName={'sketchbook'} clicker={this.gallerySwitch}/>
