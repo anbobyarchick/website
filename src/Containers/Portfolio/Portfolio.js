@@ -39,7 +39,7 @@ class Portfolio extends Component {
         return (
             <Aux>
                 {/* GALLERY IS BEING SET HERE! */}
-                <GalleryWindow galleryName={'illustration'}/>
+                <GalleryWindow galleryName={'sketchbook'}/>
                 <GalleryNavButton galleryName={'digital'} clicker={this.gallerySwitch} />
                 <GalleryNavButton galleryName={'illustrations'} clicker={this.gallerySwitch}/>
                 <GalleryNavButton galleryName={'sketchbook'} clicker={this.gallerySwitch}/>
